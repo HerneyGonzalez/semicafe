@@ -49,10 +49,14 @@ h5 {
 
 p {
   font-size: 14.2px;
-  color: #868686;
+  color: #5c5a5a;
   line-height: 2.2;
 }
-
+.parrafo{
+  color:#5c5a5a;
+  font-size:x-small;
+  line-height: 2.2;
+}
 img {
   max-width: 100%;
 }
@@ -80,8 +84,8 @@ ol {
 	Helper CSS
 -----------------------*/
 .spad {
-  padding-top: 130px;
-  padding-bottom: 130px;
+  padding-top: 40px;
+  padding-bottom: 40px;
 }
 
 .sp-pad {
@@ -102,6 +106,14 @@ ol {
   text-transform: uppercase;
   margin-bottom: 45px;
   letter-spacing: 6px;
+}
+.sp-title1 {
+  font-size: 30px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 45px;
+  letter-spacing: 6px;
+  padding-left: 40px;
 }
 
 .section-title h2 {
@@ -736,7 +748,7 @@ ol {
 
 .hs-item {
   min-height: 400px;
-  max-height: 600px;
+  max-height: 482px;
   position: relative;
   display: table;
   width: 100%;
@@ -799,10 +811,11 @@ ol {
 }
 
 .set-bg {
-	background-size: cover;  /* Asegura que la imagen cubra el área */
-    background-position: center; /* Centra la imagen */
-    max-height: 100%;
-	height: 100%; /* Asegura que la imagen ocupe el 100% del contenedor */
+  background-size: cover; /* Asegura que la imagen cubra el área */
+  background-position: center; /* Centra la imagen */
+  /*  max-height: 100%; */
+  /* 	height: 100%; /* Asegura que la imagen ocupe el 100% del contenedor */
+  height: 482px;
 }
 
 /*---------------------
@@ -823,6 +836,7 @@ ol {
   position: relative;
   display: block;
   overflow: hidden;
+  padding: 5px;
 }
 
 .single-portfolio {
@@ -832,7 +846,6 @@ ol {
   float: left;
   display: block;
   background-position: center center;
-
 }
 
 .single-portfolio.sm-wide {
@@ -951,7 +964,7 @@ ol {
 }
 
 .services-text p {
-  font-size: 20px;
+  font-size: 16px;
   font-weight: 600;
   margin-bottom: 50px;
 }
@@ -966,122 +979,20 @@ ol {
 /*---------------------
 	Contact section
 -----------------------*/
-/* .contact-section {
-	padding-top: 150px;
-	padding-bottom: 150px;
-	position: relative;
-	padding-left: 20px;
-    padding-right: 20px;
-}
-
-.contact-section .contact-warp {
-	position: relative;
-	z-index: 2;
-}
-
-.contact-section:after {
-	position: absolute;
-	content: '';
-	width: 100%;
-	height: 100%;
-	left: 0;
-	top: 0;
-	background: #000;
-	opacity: 0.7;
-	z-index: 1;
-}
-
-.contact-text {
-	position: relative;
-	width: auto;
-	padding: 20px;
-	margin-bottom: 30px;
-	left: 140px;
-}
-
-.contact-text .sp-sub-title,
-.contact-text .sp-title,
-.contact-text p {
-	color: #fff;
-}
-
-.contact-text p {
-	font-size: 16px;
-	margin-bottom: 20px;
-}
-
-.contact-text .con-info {
-	list-style: none;
-}
-
-.contact-text .con-info li {
-	color: #fff;
-	margin-bottom: 20px;
-	font-size: 14px;
-}
-
-.contact-text .con-info li i {
-	width: 30px;
-	float: left;
-	color: #616161;
-	display: block;
-	margin-right: 25px;
-	font-size: 20px;
-}
-
-.contact-form {
-	padding-top: 80px;
-}
-
-.contact-form input[type='text'],
-.contact-form input[type='email'],
-.contact-form textarea {
-	width: 100%;
-	background: none;
-	border: none;
-	border-bottom: 2px solid #fff;
-	color: #fff;
-	font-size: 14px;
-	padding: 10px 0 10px;
-	margin-bottom: 25px;
-	min-height: 100px;
-	max-height: 200px;
-	max-width: 100%;
-
-}
-
-.contact-form textarea {
-	height: auto;
-	padding-bottom: 10px;
-	margin-bottom: 35px;
-}
-
-.contact-form ::-webkit-input-placeholder {
-	font-style: italic;
-	color: #fff;
-}
-
-.contact-form :-ms-input-placeholder {
-	font-style: italic;
-	color: #fff;
-}
-
-.contact-form ::-ms-input-placeholder {
-	font-style: italic;
-	color: #fff;
-}
-
-.contact-form ::placeholder {
-	font-style: italic;
-	color: #fff;
-}*/
 
 /* Estilos generales */
+.main-container{
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
 .contact-section {
   padding: 100px 0; /* Ajusta el padding para no tener espacios muy grandes */
   background-size: cover;
   background-position: center;
   position: relative;
+  flex: 1;
 }
 
 .contact-section:after {
@@ -1141,6 +1052,7 @@ ol {
   padding: 30px;
   border-radius: 8px;
   backdrop-filter: blur(5px);
+  margin-bottom: 60px;
 }
 
 .contact-form h4 {
@@ -1197,6 +1109,10 @@ ol {
     padding: 20px;
   }
 
+  .contact-form {
+    margin-bottom: 80px; /* Más espacio debajo del formulario en móviles */
+  }
+
   .contact-text {
     text-align: center;
   }
@@ -1207,6 +1123,10 @@ ol {
 ----------------------*/
 .footer-section {
   background: #0d0d0d;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  width: 100%;
 }
 
 .footer-section h2 {
@@ -1597,7 +1517,8 @@ ol {
 
 @media only screen and (max-width: 1366px) {
   .hs-item {
-    min-height: 750px;
+    min-height: 550px;
+    max-height: 350px;
   }
   .single-portfolio {
     height: 400px;
