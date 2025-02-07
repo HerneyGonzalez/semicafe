@@ -49,8 +49,8 @@ if (isset($_POST['enviar'])) {
         $ciudad = htmlspecialchars($_POST['ciudad']);
         $mensaje = htmlspecialchars($_POST['mensaje']);
 
-        $header = "From: ejemplo@gmail.com" . "\r\n";
-        $header .= "Reply-To: noreply@example.com" . "\r\n";
+        $header = "From: ferneyvallejogonzalez@gmail.com" . "\r\n";
+        $header .= "Reply-To: ferneyvallejogonzalez@gmail.com" . "\r\n";
         $header .= "X-Mailer: PHP/" . phpversion();
 
         $asunto = "Mensaje de contacto de $nombre $apellido";
