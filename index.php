@@ -252,7 +252,7 @@ La forma más eficiente y económica de obtener semilleros de alta calidad es co
 										<textarea id="mensaje" name="mensaje" required placeholder="Mensaje"></textarea>
 									</div>
 									<div class="col-md-12">
-										<button class="site-btn light" type="submit">Enviar</button>
+										<button class="site-btn light" type="submit" name="enviar">Enviar</button>
 									</div>
 								</div>
 							</form>
