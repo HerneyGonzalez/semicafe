@@ -16,15 +16,15 @@ export default async function handler(req, res) {
     const transporter = nodemailer.createTransport({
       service: "gmail", // O usa SMTP de otro proveedor
       auth: {
-        user: "ferneyvallejogonzalez@gmail.com", // Cambia esto por tu email
+        user: "semicafedecalidad@gmail.com", // Cambia esto por tu email
         pass: "ccvq twqm pmdu bpzl", // Usa una contraseña segura o App Password
       },
     });
 
     // Configurar el correo
     const mailOptions = {
-      from: `"Formulario de Contacto" <ferneyvallejogonzalez@gmail.com>`,
-      to: "ferneyvallejogonzalez@gmail.com", // Aquí recibe el mensaje
+      from: `"Formulario de Contacto" <noreplay@example.com>`,
+      to: "semicafedecalidad@gmail.com", // Aquí recibe el mensaje
       subject: "Nuevo mensaje del formulario de contacto",
       text: `Nombre: ${nombre}\nApellido: ${apellido}\nEmail: ${email}\nCiudad: ${ciudad}\nMensaje: ${mensaje}`,
     };
