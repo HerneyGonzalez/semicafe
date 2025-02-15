@@ -56,7 +56,7 @@ if (isset($_POST['enviar'])) {
         $asunto = "Mensaje de contacto de $nombre $apellido";
         $cuerpoMensaje = "Nombre: $nombre\nApellido: $apellido\nEmail: $email\nCiudad: $ciudad\nMensaje: $mensaje";
 
-        $mail = @mail($email, $asunto, $cuerpoMensaje, $header);
+        $mail = mail($email, $asunto, $cuerpoMensaje, $header);
 
         if ($mail) {
             echo "<h4>¡Mail enviado exitosamente!</h4>";
