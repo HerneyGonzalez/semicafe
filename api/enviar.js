@@ -17,7 +17,7 @@ export default async function handler(req, res) {
       service: "gmail", // O usa SMTP de otro proveedor
       auth: {
         user: "semicafedecalidad@gmail.com", // Cambia esto por tu email
-        pass: "ccvq twqm pmdu bpzl", // Usa una contraseña segura o App Password
+        pass: "kmzp mzpe pfvr mixi", // Usa una contraseña segura o App Password
       },
     });
 
