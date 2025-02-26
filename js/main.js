@@ -155,3 +155,58 @@ $(window).on('load', function() {
 
 })(jQuery);
 
+document.addEventListener("DOMContentLoaded", function () {
+    // Detectar dispositivos táctiles
+    function isTouchDevice() {
+        return 'ontouchstart' in window || navigator.maxTouchPoints;
+    }
+
+    if (isTouchDevice()) {
+        let portfolioItems = document.querySelectorAll(".single-portfolio");
+
+        portfolioItems.forEach(item => {
+            let info = item.querySelector(".portfolio-info");
+            let link = item.querySelector("a"); // Capturamos el enlace
+
+            let touched = false; // Estado de toque
+
+            item.addEventListener("click", function (event) {
+                if (!touched) {
+                    // Primer toque: solo muestra la información
+                    event.preventDefault(); // Evita que el enlace se abra de inmediato
+                    info.style.opacity = "1";
+                    touched = true;
+
+                    // Ocultar nuevamente si tocan otra tarjeta
+                    portfolioItems.forEach(otherItem => {
+                        if (otherItem !== item) {
+                            otherItem.querySelector(".portfolio-info").style.opacity = "0";
+                            otherItem.setAttribute("data-touched", "false");
+                        }
+                    });
+
+                    // Restablecer el estado después de unos segundos si no tocan de nuevo
+                    setTimeout(() => { touched = false; }, 3000);
+                } else {
+                    // Segundo toque: permite seguir el enlace
+                    window.location.href = link.href;
+                }
+            });
+        });
+    }
+});
+
+$(document).ready(function () {
+    $('.single-portfolio').each(function () {
+        var $item = $(this);
+        var $link = $item.find('a');
+        var agotado = $item.hasClass('agotado'); // Verifica si está agotado
+
+        if (agotado) {
+            $link.on('click', function (event) {
+                event.preventDefault(); // Evita que se abra el enlace original
+                window.location.href = 'portfolio.html'; // Redirige a la página de stock
+            });
+        }
+    });
+});
