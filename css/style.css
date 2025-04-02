@@ -1447,10 +1447,12 @@ ol {
 }
 
 .review-slider .rs-item p {
-  font-size: 24px;
+  font-size: clamp(14px, 2vw, 18px);;
   font-style: italic;
   color: #fff;
   margin-bottom: 50px;
+  line-height: 1.4; /* Mejora la legibilidad */
+  text-align: justify;
 }
 
 .review-slider .rs-item h4 {
