@@ -1,24 +1,25 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
 	<title>catimor</title>
 	<meta charset="UTF-8">
 	<meta name="description" content="HALO photography portfolio template">
 	<meta name="keywords" content="photography, portfolio, onepage, creative, html">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<!-- Favicon -->   
-	<link href="img/favicon.ico" rel="shortcut icon"/>
+	<!-- Favicon -->
+	<link href="img/favicon.ico" rel="shortcut icon" />
 
 	<!-- Google Fonts -->
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i" rel="stylesheet">
 
 	<!-- Stylesheets -->
-	<link rel="stylesheet" href="css/bootstrap.min.css"/>
-	<link rel="stylesheet" href="css/font-awesome.min.css"/>
-	<link rel="stylesheet" href="css/flaticon.css"/>
-	<link rel="stylesheet" href="css/animate.css"/>
-	<link rel="stylesheet" href="css/owl.carousel.css"/>
-	<link rel="stylesheet" href="css/style.css"/>
+	<link rel="stylesheet" href="css/bootstrap.min.css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+	<link rel="stylesheet" href="css/flaticon.css" />
+	<link rel="stylesheet" href="css/animate.css" />
+	<link rel="stylesheet" href="css/owl.carousel.css" />
+	<link rel="stylesheet" href="css/style.css" />
 
 
 	<!--[if lt IE 9]>
@@ -27,14 +28,14 @@
 	<![endif]-->
 
 </head>
+
 <body>
 	<!-- Page Preloder -->
 	<div id="preloder">
 		<div class="loader"></div>
 	</div>
 	<a href="https://wa.me/573214711497" class="whatsapp-float" target="_blank">
-		<img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" 
-			 alt="WhatsApp">
+		<img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
 	</a>
 	<a href="https://t.me/semicafe" class="telegram-float" target="_blank">
 		<img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg" alt="Telegram">
@@ -75,31 +76,45 @@
 
 
 	<!-- Blogs section start -->
-	
+
 	<section class="single-work-section sp-pad spad">
-		
+
 		<div class="container-fluid p-0">
-			<a href="https://api.whatsapp.com/send?phone=+573214711497&text=¡Hola!%20Estoy%20interesado%20en%20el%20Café%20Castilla%20f6.%20¿Podrían%20darme%20más%20información?" 
-			class="btn-comprar" target="_blank">
-			Comprar ahora <i class="fa fa-whatsapp"></i>
-		 </a>
-			    <div class="work-slider owl-carousel">
-				 <div class="ws-item set-bg" data-setbg="img/portfolio/5.jpg"></div>
-			   </div>
-			   <div class="row">
-				 <div class="col-xl-5">
-					<a href="https://api.whatsapp.com/send?phone=+573214711497&text=¡Hola!%20Estoy%20interesado%20en%20el%20Café%20Castilla%20f6.%20¿Podrían%20darme%20más%20información?" 
+			<a href="https://api.whatsapp.com/send?phone=+573214711497&text=¡Hola!%20Estoy%20interesado%20en%20el%20Café%20Castilla%20f6.%20¿Podrían%20darme%20más%20información?"
+				class="btn-comprar" target="_blank">
+				Comprar ahora <i class="fa fa-whatsapp"></i>
+			</a>
+			<div class="galeria">
+				<img src="img/portfolio/1.jpg" alt="Semillero 1" onclick="abrirModal(this)">
+				<img src="img/portfolio/2.jpg" alt="Semillero 2" onclick="abrirModal(this)">
+				<img src="img/portfolio/3.jpg" alt="Semillero 3" onclick="abrirModal(this)">
+				<img src="img/portfolio/4.jpg" alt="Semillero 4" onclick="abrirModal(this)">
+				<img src="img/portfolio/5.jpg" alt="Semillero 5" onclick="abrirModal(this)">
+				<img src="img/portfolio/6.jpg" alt="Semillero 6" onclick="abrirModal(this)">
+			</div>
+			<div id="modal" class="modal" onclick="cerrarModal()">
+				<span class="close" onclick="cerrarModal()">&times;</span>
+				<div class="modal-content">
+					<img id="modal-img">
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xl-5">
+					<a href="https://api.whatsapp.com/send?phone=+573214711497&text=¡Hola!%20Estoy%20interesado%20en%20el%20Café%20Castilla%20f6.%20¿Podrían%20darme%20más%20información?"
 						class="btn-comprar" target="_blank">
 						Comprar ahora <i class="fa fa-whatsapp"></i>
-		 			</a>
-                  <ul class="work-info-list">
-                 	<span><h3><b>Características de nuestro producto :</b></h3></span>
+					</a>
+					<ul class="work-info-list">
+						<span>
+							<h3><b>Características de nuestro producto :</b></h3>
+						</span>
 
-                  </ul>
-                 </div>
-                </div>
+					</ul>
+				</div>
+			</div>
 
-			<br><br><div class="row">
+			<br><br>
+			<div class="row">
 				<div class="col-xl-5">
 					<ul class="work-info-list">
 						<li>
@@ -132,14 +147,23 @@
 					<span class="sp-sub-title">--------</span>
 					<h3 class="sp-title">Nuestro producto</h3>
 					<p><b>Catimor en Detalle</b></p>
-<p><b>Varietal Catimori</b></p>
-<p>El Café Catimor es una variedad híbrida resultante del cruce entre Timor Híbrido y Caturra, combinando la resistencia a enfermedades del primero con la calidad en taza del segundo. Desarrollado en la década de 1950, es altamente resistente a la roya del café y otras plagas, lo que lo hace ideal para cultivos en zonas vulnerables.
+					<p><b>Varietal Catimori</b></p>
+					<p>El Café Catimor es una variedad híbrida resultante del cruce entre Timor Híbrido y Caturra,
+						combinando la resistencia a enfermedades del primero con la calidad en taza del segundo.
+						Desarrollado en la década de 1950, es altamente resistente a la roya del café y otras plagas, lo
+						que lo hace ideal para cultivos en zonas vulnerables.
 
-	Se adapta bien a altitudes entre 600 y 1.500 m.s.n.m., con temperaturas de 18 a 24°C. Su crecimiento es rápido y ofrece alta productividad, aunque en altitudes bajas su calidad en taza puede verse afectada.
-	
-	En cuanto a su perfil sensorial, el Catimor presenta un sabor intenso y afrutado, con notas herbales y achocolatadas, una acidez media-baja y un cuerpo denso y cremoso. Su aroma destaca por matices especiados y florales, con un retrogusto ligeramente astringente.
-	
-	Es una variedad ideal para caficultores que buscan rendimiento alto y resistencia a enfermedades, aunque su cultivo requiere un manejo cuidadoso para optimizar su calidad en taza.</p>
+						Se adapta bien a altitudes entre 600 y 1.500 m.s.n.m., con temperaturas de 18 a 24°C. Su
+						crecimiento es rápido y ofrece alta productividad, aunque en altitudes bajas su calidad en taza
+						puede verse afectada.
+
+						En cuanto a su perfil sensorial, el Catimor presenta un sabor intenso y afrutado, con notas
+						herbales y achocolatadas, una acidez media-baja y un cuerpo denso y cremoso. Su aroma destaca
+						por matices especiados y florales, con un retrogusto ligeramente astringente.
+
+						Es una variedad ideal para caficultores que buscan rendimiento alto y resistencia a
+						enfermedades, aunque su cultivo requiere un manejo cuidadoso para optimizar su calidad en taza.
+					</p>
 				</div>
 			</div>
 		</div>
@@ -147,7 +171,7 @@
 	<!-- Blogs section end -->
 
 
-	
+
 
 
 	<!-- Footer section start -->
@@ -156,20 +180,21 @@
 			<h2>¡vamos a trabajar juntos!</h2>
 			<p>semicafedecalidad@gmail.com</p>
 			<div class="social">
-				<a href="#"><i class="fa fa-pinterest"></i></a>
-				<a href="#"><i class="fa fa-facebook"></i></a>
-				<a href="#"><i class="fa fa-twitter"></i></a>
-				<a href="#"><i class="fa fa-dribbble"></i></a> </br>
+				<a href="#"><i class="fa-brands fa-pinterest"></i></a>
+				<a href="#"><i class="fa-brands fa-facebook"></i></a>
+				<a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+				<a href="#"><i class="fa-brands fa-instagram"></i></a></br>
+				</br><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+				Copyright &copy;
+				<script>document.write(new Date().getFullYear());</script> All rights reserved<i class="fa fa-heart-o"
+					aria-hidden="true"></i>
+				<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
 
-</br><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved<i class="fa fa-heart-o" aria-hidden="true"></i>
-<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-				
 			</div>
 		</div>
 	</footer>
 	<!-- Footer section end -->
-	
+
 
 	<!--====== Javascripts & Jquery ======-->
 	<script src="js/jquery-3.2.1.min.js"></script>
@@ -179,4 +204,5 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 	<script src="js/circle-progress.min.js"></script>
 	<script src="js/main.js"></script>
 </body>
+
 </html>
