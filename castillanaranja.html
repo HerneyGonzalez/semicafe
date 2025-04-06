@@ -82,7 +82,7 @@
 		<div class="container-fluid p-0">
 			<a href="https://api.whatsapp.com/send?phone=+573214711497&text=¡Hola!%20Estoy%20interesado%20en%20el%20Café%20Castilla%20f6.%20¿Podrían%20darme%20más%20información?"
 				class="btn-comprar" target="_blank">
-				Comprar ahora <i class="fa fa-whatsapp"></i>
+				Comprar ahora <i class="fa-brands fa-whatsapp"></i>
 			</a>
 			<div class="galeria">
 				<img src="img/portfolio/1.jpg" alt="Semillero 1" onclick="abrirModal(this)">
@@ -104,7 +104,7 @@
 				<div class="col-xl-5">
 					<a href="https://api.whatsapp.com/send?phone=+573214711497&text=¡Hola!%20Estoy%20interesado%20en%20el%20Café%20Castilla%20f6.%20¿Podrían%20darme%20más%20información?"
 						class="btn-comprar" target="_blank">
-						Comprar ahora <i class="fa fa-whatsapp"></i>
+						Comprar ahora <i class="fa-brands fa-whatsapp"></i>
 					</a>
 					<ul class="work-info-list">
 						<span>
@@ -192,7 +192,12 @@
 		</div>
 	</footer>
 	<!-- Footer section end -->
-
+	<script>
+		window.onload = () => {
+			document.getElementById("modal").style.display = "none";
+		};
+	</script>
+	
 
 	<!--====== Javascripts & Jquery ======-->
 	<script src="js/jquery-3.2.1.min.js"></script>
