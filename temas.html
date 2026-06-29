@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tarjetas Temas - Semicafé</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    ul {
+      list-style-type: disc;
+      margin-left: 1.9em;
+    }
+
+    li {
+      font-size: 14.2px;
+      color: #5c5a5a;
+      line-height: 2.2;
+    }
+
+    body {
+      font-family: 'Open Sans', sans-serif;
+      background-color: #f5f5f5;
+      padding: 1rem;
+    }
+
+    .topics-section {
+      text-align: center;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .section-title {
+      font-size: 30px;
+      margin-bottom: 1rem;
+      color: #333;
+      letter-spacing: 6px;
+      text-transform: uppercase;
+    }
+
+    .section-subtitle {
+      font-size: 1.1rem;
+      color: #666;
+      margin-bottom: 2rem;
+    }
+
+    .topics-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+    }
+
+    .topic-card {
+      background: #fff;
+      border-radius: 12px;
+      padding: 2rem 1rem;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      transition: transform 0.3s ease;
+      cursor: pointer;
+    }
+
+    .topic-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .icon-circle {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1rem auto;
+    }
+
+    .topic-title {
+      font-size: 1.25rem;
+      color: #222;
+      margin-bottom: 0.5rem;
+      font-weight: 600;
+    }
+
+    .topic-description {
+      font-size: 0.95rem;
+      color: #555;
+      padding: 0 1rem;
+    }
+
+    /* Estilo para el detalle */
+    .topic-detail {
+      margin-top: 2rem;
+      background: #fff;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+      text-align: left;
+      display: none;
+      animation: fadeIn 0.5s ease-in-out;
+    }
+
+    .topic-detail h3 {
+      margin-bottom: 1rem;
+      color: #222121;
+      letter-spacing: 6px;
+    }
+
+    .topic-detail p {
+      font-size: 14.2px;
+      color: #5c5a5a;
+      line-height: 2.2;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(10px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <section class="topics-section">
+    <h2 class="section-title">Información Importante</h2>
+    <p class="section-subtitle">
+      Descubra información completa sobre todos los aspectos del cultivo del café,<br>
+      desde las semillas hasta la producción.
+    </p>
+
+    <div class="topics-grid">
+      <div class="topic-card" data-title="Siembra y viveros"
+        data-detail="La siembra del café comienza con la selección de semillas de calidad. Se recomienda germinarlas en viveros bajo sombra parcial para protegerlas del sol fuerte y garantizar un crecimiento uniforme. Los suelos deben ser fértiles y bien drenados.">
+        <div class="icon-circle" style="background-color:#bfd9ff;">
+          <i class="fa-solid fa-newspaper" style="color:#235ba8;"></i>
+        </div>
+        <h3 class="topic-title">Siembra y viveros</h3>
+        <p class="topic-description">El éxito del vivero empieza antes de sembrar: con escoger un buen grano.</p>
+      </div>
+
+      <div class="topic-card" data-title="Cuidado de las plantas"
+        data-detail="El cuidado incluye riego controlado, fertilización adecuada y poda de mantenimiento. Es fundamental eliminar ramas secas y controlar la sombra para optimizar la fotosíntesis.">
+        <div class="icon-circle" style="background-color:#c6f2c4;">
+          <i class="fa-solid fa-seedling" style="color:#328039;"></i>
+        </div>
+        <h3 class="topic-title">Cuidado de las plantas</h3>
+        <p class="topic-description">Ideal times and techniques for planting coffee</p>
+      </div>
+
+      <div class="topic-card" data-title="Enfermedades y plagas"
+        data-detail="La roya, la broca y el mal de hilachas son algunas de las principales amenazas. Se recomienda el uso de control biológico, fungicidas naturales y un monitoreo constante para evitar pérdidas.">
+        <div class="icon-circle" style="background-color:#ffe4b5;">
+          <i class="fa-solid fa-map-location-dot" style="color:#a46200;"></i>
+        </div>
+        <h3 class="topic-title">Enfermedades y plagas</h3>
+        <p class="topic-description">Best regions and climate conditions for coffee</p>
+      </div>
+
+      <div class="topic-card" data-title="Variedades y genética" post-detail="variedades-genetica">
+        <div class="icon-circle" style="background-color:#ffd2d2;">
+          <i class="fa-solid fa-notes-medical" style="color:#d12c2c;"></i>
+        </div>
+        <h3 class="topic-title">Variedades y genética</h3>
+        <p class="topic-description">esta es una prueba</p>
+      </div>
+
+      <div class="topic-card" data-title="Clima y regiones"
+        data-detail="El café se cultiva mejor en regiones entre 1200 y 1800 msnm, con temperaturas entre 18°C y 22°C y lluvias bien distribuidas durante el año.">
+        <div class="icon-circle" style="background-color:#f0e6ff;">
+          <i class="fa-solid fa-tree" style="color:#7c3aed;"></i>
+        </div>
+        <h3 class="topic-title">Clima y regiones</h3>
+        <p class="topic-description">Different coffee varieties and their characteristics</p>
+      </div>
+
+      <div class="topic-card" data-title="Innovación y sostenibilidad"
+        data-detail="Las nuevas prácticas incluyen sistemas agroforestales, reducción del uso de químicos y certificaciones sostenibles que aseguran un impacto positivo en el medio ambiente y las comunidades.">
+        <div class="icon-circle" style="background-color:#d4fafa;">
+          <i class="fa-solid fa-check-square" style="color:#3e9d9d;"></i>
+        </div>
+        <h3 class="topic-title">Innovación y sostenibilidad</h3>
+        <p class="topic-description">Expert advice for successful coffee cultivation</p>
+      </div>
+    </div>
+
+    <!-- Aquí se despliega la información -->
+    <div id="topic-detail" class="topic-detail"></div>
+  </section>
+  <style>
+    /* Estilos del post dinámico */
+    #topic-detail {
+      display: none;
+      background: #fff;
+      padding: 2rem;
+      border-radius: 14px;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+      animation: fadeInPost 0.6s ease-in-out;
+      max-width: 900px;
+      margin: 2rem auto;
+    }
+
+    #topic-detail.active {
+      display: block;
+    }
+
+    #topic-detail img {
+      width: 100%;
+      max-height: 400px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-bottom: 1.2rem;
+    }
+
+    #topic-detail h1 {
+      font-size: 2rem;
+      color: #222121;
+      margin-bottom: 0.8rem;
+    }
+
+    #topic-detail p {
+      line-height: 1.7;
+      font-size: 1.05rem;
+      color: #444;
+    }
+
+    #topic-detail em {
+      color: #777;
+    }
+
+    .post .author {
+      background: #f9fafc;
+      padding: 1rem;
+      border-left: 4px solid #2a4d7a;
+      border-radius: 8px;
+      margin-top: 1.5rem;
+    }
+
+    .post .author strong {
+      color: #2a4d7a;
+    }
+
+    .back-btn {
+      background: none;
+      border: none;
+      color: #235ba8;
+      font-weight: 600;
+      font-size: 1rem;
+      margin-bottom: 1rem;
+      cursor: pointer;
+      transition: color 0.2s ease;
+    }
+
+    .back-btn:hover {
+      color: #163d77;
+    }
+
+    @keyframes fadeInPost {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Oculta la grilla cuando se abre un post */
+    .topics-grid.hidden {
+      display: none;
+    }
+
+    @media (max-width: 700px) {
+      #topic-detail h1 {
+        font-size: 1.6rem;
+      }
+
+      #topic-detail p {
+        font-size: 1rem;
+      }
+    }
+  </style>
+
+  <script type="module">
+    import { posts } from './js/posts.js';
+
+    const cards = document.querySelectorAll(".topic-card");
+    const grid = document.querySelector(".topics-grid");
+    const detail = document.getElementById("topic-detail");
+
+    // Función para mostrar un post
+    function showPost(post) {
+      detail.innerHTML = `
+      <button class="back-btn" id="back-btn">← Volver a la lista</button>
+      <article class="post">
+        <h1>${post.title}</h1>
+        <img src="${post.coverImage}" alt="${post.title}">
+        <p><em>${post.publishedDate} • ${post.readingTime} min de lectura</em></p>
+        <div class="content">${post.content}</div>
+        <hr>
+        <div class="author">
+          <strong>${post.author.name}</strong> - ${post.author.title}
+          <p>${post.author.bio}</p>
+        </div>
+      </article>
+    `;
+
+      grid.classList.add("hidden");
+      detail.classList.add("active");
+      window.scrollTo({ top: 0, behavior: "smooth" });
+
+      document.getElementById("back-btn").addEventListener("click", hidePost);
+    }
+
+    // Función para volver a la lista
+    function hidePost() {
+      detail.classList.remove("active");
+      grid.classList.remove("hidden");
+      detail.innerHTML = "";
+      window.scrollTo({ top: grid.offsetTop, behavior: "smooth" });
+    }
+
+    // Asocia cada tarjeta a su post
+    cards.forEach((card, index) => {
+      card.dataset.id = `post-${index + 1}`;
+      card.addEventListener("click", () => {
+        const postId = card.dataset.id;
+        const post = posts.find(p => p.id === postId);
+        if (post) showPost(post);
+      });
+    });
+  </script>
+
+  <!-- <script>
+    const cards = document.querySelectorAll(".topic-card");
+    const detail = document.getElementById("topic-detail");
+
+    cards.forEach(card => {
+      card.addEventListener("click", () => {
+        const title = card.getAttribute("data-title");
+        const content = card.getAttribute("data-detail");
+        let htmlContent = "";
+
+        if (content.startsWith("#")) {
+          const template = document.querySelector(content);
+          htmlContent = template ? template.innerHTML : `<p>UPS! NO HAY TEXTO POR MOSTRAR</p>`;
+        } else {
+          htmlContent = `<p>UPS! NO HAY TEXTO POR MOSTRAR</p>`;
+        }
+
+        detail.innerHTML = `
+        <button class="close-btn">Cerrar</button>
+        <h3>${title}</h3>
+        ${htmlContent}
+      `;
+
+        detail.style.display = "block";
+        detail.scrollIntoView({ behavior: "smooth" });
+
+        detail.querySelector(".close-btn").addEventListener("click", () => {
+          detail.style.display = "none";
+        });
+      });
+    });
+  </script> -->
+
+
+
+</body>
+
+<!-- <script type="module">
+  import { posts } from './js/posts.js';
+
+  const cards = document.querySelectorAll(".topic-card");
+  const detail = document.getElementById("topic-detail");
+
+  cards.forEach((card, index) => {
+    // Asigna ID al vuelo si no existe
+    card.dataset.id = `post-${index + 1}`;
+
+    card.addEventListener("click", () => {
+      const postId = card.dataset.id;
+      const post = posts.find(p => p.id === postId);
+
+      if (post) {
+        detail.innerHTML = `
+          <button class="close-btn">Cerrar</button>
+          <article class="post">
+            <h1>${post.title}</h1>
+            <img src="${post.coverImage}" alt="${post.title}" style="width:100%;border-radius:10px;">
+            <p><em>${post.publishedDate} • ${post.readingTime} min</em></p>
+            <div>${post.content}</div>
+            <hr>
+            <div class="author">
+              <strong>${post.author.name}</strong> - ${post.author.title}
+              <p>${post.author.bio}</p>
+            </div>
+          </article>
+        `;
+        detail.style.display = "block";
+        window.scrollTo({ top: detail.offsetTop, behavior: 'smooth' });
+        detail.querySelector(".close-btn").addEventListener("click", () => {
+          detail.style.display = "none";
+        });
+      } else {
+        detail.innerHTML = `<p>Post no encontrado 😕</p>`;
+      }
+    });
+  });
+</script> -->
+
+</html>
